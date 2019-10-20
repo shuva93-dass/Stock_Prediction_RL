@@ -4,9 +4,11 @@ This folder has 2 components
 1. Recurrent_Graphs.py - converts a time series stock data to recurrent graphs for input to CNN 
 2. recc.png - recurrent graph image corresponding to the train data for over a time of 9 years.
 
-The finalized architectire is RNN
 
 # RNN-Actor Critic
+
+The finalized architectire is RNN
+
 This folder has 5 scripts:
 1. Actor.py: It returns the best action or a policy that refers to a probability distribution over actions.
 2. Critic.py: The critic evaluates the actions returned by the actor-network.
