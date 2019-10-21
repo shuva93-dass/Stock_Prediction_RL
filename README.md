@@ -2,7 +2,7 @@
 # Recurrent (Dropped) 
 This folder has 2 components
 1. Recurrent_Graphs.py - converts a time series stock data to recurrent graphs for input to CNN 
-2. recc.png - recurrent graph image corresponding to the train data for over a time of 9 years.
+2. recc.png - recurrent graph image corresponding to the train data for over a time of 4 years.
 
 
 # RNN-Actor Critic
