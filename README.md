@@ -15,3 +15,9 @@ This folder has 5 scripts:
 3. Agent.py: Train an agent to perform reinforcement learning based on the actor and critic networks
 4. Helper.py: Create functions like formating the stock price and get a state vector that will be helpful for training,
 5. Training.py: Train the data, based on our agent and helper methods.
+
+
+# DataSet
+This folder contains two CSV files 
+1. training_data.csv - contains stock data from January 2014 to August 2018 with columns Date, Open, High, Low, Close*, Adj Close* and Volume.
+2. testing_data.csv - contains stock data from September 2018 to September 2019 with columns Date, Open, High, Low, Close*, Adj Close* and Volume.
