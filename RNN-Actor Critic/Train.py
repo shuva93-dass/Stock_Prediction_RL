@@ -60,4 +60,4 @@ for e in range(episode_count):
             
         
 train_end = datetime.datetime.now(pytz.timezone('America/Chicago'))
-print ('\033[95m'+ 'Start time for training:',train_end.strftime("%I:%M:%S %p"))
+print ('\033[95m'+ 'End time for training:',train_end.strftime("%I:%M:%S %p"))
