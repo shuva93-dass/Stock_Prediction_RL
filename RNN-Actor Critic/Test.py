@@ -14,14 +14,14 @@ for t in range(l_test):
    reward = 0
    if action == 1:  
        agent.inventory.append(test_data[t])
-	   print('\033[94m'+"Buy the stock at Price:" + formatPrice(test_data[t]))
+	   print('\033[94m'+"Buy the stock at Price:" + formatPrice(test_data[t]) + '\033[0m')
    elif action == 2 and len(agent.inventory) > 0: 
        bought_price = agent.inventory.pop(0)
        reward = max(test_data[t] - bought_price, 0)
        total_profit += test_data[t] - bought_price
-	   print('\033[91m' +'Sell the stock at Price: '+ formatPrice(test_data[t]) + ' | '  + 'Updated Profit: ' + '\033[1m'+ formatPrice(test_data[t] - bought_price))
+	   print('\033[91m' +'Sell the stock at Price: '+ formatPrice(test_data[t]) + ' | '  + 'Updated Profit: ' + '\033[1m'+ formatPrice(test_data[t] - bought_price) + '\033[0m')
 	else:
-       print ('\033[1m' + 'Hold the Stock')
+       print ('\033[1m' + 'Hold the Stock'  + '\033[0m')
    if t == l_test - 1:
        done = True
    agent.step(action_prob, reward, next_state, done)
