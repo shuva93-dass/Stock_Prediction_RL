@@ -9,10 +9,10 @@ class Actor:
     def __init__(self, state_size, action_size):
         self.state_size = state_size
         self.action_size = action_size
-        self.build_model()
+        self.build_model() #calling a function to build model
         
    
-    
+ # building policy model that maps the states to actions, and start by defining the input layer.   
     def build_model(self):
         
         #LSTM ARCHITECTURE
