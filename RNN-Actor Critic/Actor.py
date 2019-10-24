@@ -3,7 +3,7 @@ from keras import layers, models, optimizers
 from keras import backend as K
 from keras.layers import *
 from keras.models import *
-
+#actor class whose object takes in the parameters of the state size and action size
 class Actor:
   # """Actor (policy) Model. """
     def __init__(self, state_size, action_size):
