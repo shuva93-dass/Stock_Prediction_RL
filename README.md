@@ -22,3 +22,9 @@ This folder has 6 scripts:
 This folder contains two CSV files 
 1. training_data.csv - contains stock data from January 2014 to August 2018 with columns Date, Open, High, Low, Close, Adj Close and Volume.
 2. testing_data.csv - contains stock data from September 2018 to September 2019 with columns Date, Open, High, Low, Close, Adj Close and Volume.
+    Date: Indicates the date under consideration.
+    Open: Indicates the price at which the market opens on that particular date.
+    High: Indicates the highest market price on that date.
+    Low: Indicates the lowest market price on that date.
+    Close: Indicates the price at which the market closes on the date, adjusted for            the split.
+    Adj Close: Indicates the adjusted closing price for both the split and                      dividends.
