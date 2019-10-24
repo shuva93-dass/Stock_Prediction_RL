@@ -17,10 +17,10 @@ class Actor:
         
         #LSTM ARCHITECTURE
         states=Input((self.state_size,1,),name = 'states')
-        net = LSTM(32*2**0,kernel_regularizer=layers.regularizers.l2(1e-6),return_sequences = True)(states)
+        net = LSTM(16,kernel_regularizer=layers.regularizers.l2(1e-6),return_sequences = True)(states)
         net = layers.BatchNormalization()(net)
         net = layers.Activation("relu")(net)
-        net = LSTM(32*2**1,kernel_regularizer=layers.regularizers.l2(1e-6),return_sequences = True)(net)
+        net = LSTM(32,kernel_regularizer=layers.regularizers.l2(1e-6),return_sequences = True)(net)
         net = layers.BatchNormalization()(net)
         net = layers.Activation("relu")(net)
         net = Flatten()(net)
