@@ -15,7 +15,11 @@ This folder has 6 scripts:
 3. Agent.py: Train an agent to perform reinforcement learning based on the actor and critic networks
 4. Helper.py: Create functions like formating the stock price and get a state vector that will be helpful for training,
 5. Train.py: Train the agent, based on our training data and helper methods.
-6. Test.py : Test the trained agent on testing data .
+6. Test.py : Test the trained agent on testing data.
+
+# Order of execution
+Actor.py --> Critic.py --> Agent.py --> Helper.py --> Train.py --> Test.py
+Make sure all the above scripts and both the training and testing csvs are in the same folder before starting execution. 
 
 
 # DataSet
