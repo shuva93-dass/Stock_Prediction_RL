@@ -17,10 +17,6 @@ This folder has 6 scripts:
 5. Train.py: Train the agent, based on our training data and helper methods.
 6. Test.py : Test the trained agent on testing data.
 
-# Order of execution
-Actor.py --> Critic.py --> Agent.py --> Helper.py --> Train.py --> Test.py
-Make sure all the above scripts and both the training and testing csvs are in the same folder before starting execution. 
-
 
 # DataSet
 This folder contains two CSV files 
@@ -33,3 +29,7 @@ This folder contains two CSV files
    5. Close: Indicates the price at which the market closes on the date, adjusted for the split.
    6. Adj Close: Indicates the adjusted closing price for both the split and dividends.
    7. Volume: Indicates the total volume of shares available.
+
+# Order of execution
+Actor.py --> Critic.py --> Agent.py --> Helper.py --> Train.py --> Test.py
+Make sure all the above scripts and both the training and testing csvs are in the same folder before starting execution. 
