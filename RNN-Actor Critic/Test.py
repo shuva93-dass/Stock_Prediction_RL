@@ -1,7 +1,7 @@
 # =============================================================================
 # Testing the data (run this after training part)
 #=============================================================================
-test_data = getStockData("test_data")
+test_data = getStockData("testing_data")
 l_test = len(test_data) - 1
 state = getState(test_data, 0, window_size + 1)
 total_profit = 0
