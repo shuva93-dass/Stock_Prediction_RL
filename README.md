@@ -31,5 +31,5 @@ This folder contains two CSV files
    7. Volume: Indicates the total volume of shares available.
 
 # Order of execution
-Actor.py --> Critic.py --> Agent.py --> Helper.py --> Train.py --> Test.py
-Make sure all the above scripts and both the training and testing csvs are in the same folder before starting execution. 
+1. Actor.py --> Critic.py --> Agent.py --> Helper.py --> Train.py --> Test.py 
+2. Make sure all the above scripts and both the training and testing csvs are in the same folder before starting execution. 
