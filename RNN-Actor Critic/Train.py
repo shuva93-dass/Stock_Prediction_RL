@@ -5,9 +5,9 @@ import pytz
 window_size = 100                         
 batch_size = 32
 agent = Agent(window_size, batch_size)  
-data = df.iloc[:,4].tolist()
+data = get
 l = len(data) -1
-episode_count = 100
+episode_count = 15
 
 train_start = datetime.datetime.now(pytz.timezone('America/Chicago')) 
 print ('\033[95m'+'Start time for training:',train_start.strftime("%I:%M:%S %p") + '\033[0m')
