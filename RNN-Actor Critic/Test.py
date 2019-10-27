@@ -9,7 +9,7 @@ agent.inventory = []
 agent.is_eval = False
 done = False
 for t in range(l_test):
-   action = agent.act(state)
+   action = agent.act(np.reshape(state,(state[0],state[1],1)))
    next_state = getState(test_data, t + 1, window_size + 1)
    reward = 0
    if action == 1:  
