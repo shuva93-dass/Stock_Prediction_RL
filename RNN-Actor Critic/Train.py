@@ -5,7 +5,7 @@ import pytz
 window_size = 100                         
 batch_size = 32
 agent = Agent(window_size, batch_size)  
-data = get
+data = getStockData("training_data")
 l = len(data) -1
 episode_count = 15
 
