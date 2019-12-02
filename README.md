@@ -34,3 +34,12 @@ This folder contains two CSV files
 # Order of execution
 1. Actor.py --> Critic.py --> Agent.py --> Helper.py --> Train.py --> Test.py 
 2. Make sure all the above scripts and both the training and testing csvs are in the same folder before starting execution. 
+
+# Final Project Scripts
+This folder consists of 3 main models with modifications:
+1. AC_ANN_Budget: This stands for Actor-Critic ANN implementation with Budget.It consists of 5 scripts.
+   1. actor , critic , agent and helper scripts perform the same functionality as mentioned above.
+   2. evaluate_budget.py : It includes the training and testing portion embedded with budget factor.
+   
+2. Q_ANN_Budget:
+3. Q_RNN:
