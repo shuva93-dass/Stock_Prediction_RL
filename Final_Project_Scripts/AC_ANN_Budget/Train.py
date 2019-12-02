@@ -1,5 +1,5 @@
 from agent import Agent
-from helper import getStockData, getState
+from Helper import getStockData, getState
 import sys
 
 
