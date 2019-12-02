@@ -1,4 +1,7 @@
+from agent import Agent
+from helper import getStockData, getState
 import sys
+
 
 window_size = 100                         
 batch_size = 32
