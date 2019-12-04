@@ -1,8 +1,15 @@
 # Actor Script
-from keras import layers, models, optimizers
-from keras import backend as K
+import keras
+from keras.models import Sequential
+from keras.models import load_model
+from keras.layers import Dense, LSTM
+from keras.optimizers import Adam
+from keras import regularizers
+from keras import initializers
 from keras.layers import *
 from keras.models import *
+from keras import layers, models, optimizers
+from keras import backend as K
 #actor class whose object takes in the parameters of the state size and action size
 class Actor:
   # """Actor (policy) Model. """
@@ -17,10 +24,10 @@ class Actor:
         
         #LSTM ARCHITECTURE
         states=Input((self.state_size,1,),name = 'states')
-        net = LSTM(16,kernel_regularizer=layers.regularizers.l2(1e-6),return_sequences = True)(states)
+        net = LSTM(16,kernel_regularizer= regularizers.l2(1e-6),return_sequences = True)(states)
         net = layers.BatchNormalization()(net)
         net = layers.Activation("relu")(net)
-        net = LSTM(32,kernel_regularizer=layers.regularizers.l2(1e-6),return_sequences = True)(net)
+        net = LSTM(32,kernel_regularizer=regularizers.l2(1e-6),return_sequences = True)(net)
         net = layers.BatchNormalization()(net)
         net = layers.Activation("relu")(net)
         net = Flatten()(net)
