@@ -1,8 +1,15 @@
 # Critic Script
-from keras import layers, models, optimizers
-from keras import backend as K
+import keras
+from keras.models import Sequential
+from keras.models import load_model
+from keras.layers import Dense, LSTM
+from keras.optimizers import Adam
+from keras import regularizers
+from keras import initializers
 from keras.layers import *
 from keras.models import *
+from keras import layers, models, optimizers
+from keras import backend as K
 
 
 class Critic:
@@ -26,15 +33,15 @@ class Critic:
       # Define input layers 
         states=Input((self.state_size,1),name = 'states')
         actions=Input((self.action_size,1),name = 'actions')
-        net_states = LSTM(16,kernel_regularizer=layers.regularizers.l2(1e-6),return_sequences = True)(states)
+        net_states = LSTM(16,kernel_regularizer=regularizers.l2(1e-6),return_sequences = True)(states)
         net_states = layers.BatchNormalization()(net_states)
         net_states = layers.Activation("relu")(net_states)
-        net_states = LSTM(32,kernel_regularizer=layers.regularizers.l2(1e-6),return_sequences = True)(net_states)
-        net_actions = LSTM(32,kernel_regularizer=layers.regularizers.l2(1e-6))(actions)
+        net_states = LSTM(32,kernel_regularizer=regularizers.l2(1e-6),return_sequences = True)(net_states)
+        net_actions = LSTM(32,kernel_regularizer=regularizers.l2(1e-6))(actions)
         net = layers.Add()([net_states, net_actions])
         net = layers.Activation('relu')(net) 
        
-        Q_values = layers.Dense(units=1, name='q_values',kernel_initializer=layers.initializers.RandomUniform(minval=-0.003, maxval=0.003))(net)
+        Q_values = layers.Dense(units=1, name='q_values',kernel_initializer=initializers.RandomUniform(minval=-0.003, maxval=0.003))(net)
 
         self.model = models.Model(inputs=[states, actions], outputs=Q_values)
 
