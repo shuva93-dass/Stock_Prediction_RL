@@ -1,7 +1,7 @@
 #****************************************************
 #TRAINING
 #****************************************************
-
+from agent import *
 from helper import *
 import sys
 import datetime
