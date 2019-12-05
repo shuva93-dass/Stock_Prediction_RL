@@ -5,6 +5,7 @@
 import sys
 import datetime
 import pytz 
+from Helper import getStockData, getState
 
 window_size = 100                         
 batch_size = 32
