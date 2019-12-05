@@ -5,6 +5,15 @@ def formatPrice(n):
 def sigmoid(x):
     return 1/(1+math.exp(-x))
 
+def getStockData(key):
+    datavec = []
+    lines = open(key + ".csv", "r").read().splitlines()
+    
+    for line in lines[1:]:
+        datavec.append(float(line.split(",")[4]))
+    
+    return datavec
+
 def getState(data, t, n):
     d = t - n + 1
     block = data[d:t + 1] if d >= 0 else -d * [data[0]] + data[0:t + 1] # pad with t0
