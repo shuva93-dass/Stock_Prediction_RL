@@ -15,7 +15,7 @@ path = "/content/drive/My Drive/Colab Notebooks/QANNBModelss/"
 window_size = 100
 episode_count = 15
 agent = Agent(window_size)
-data = helper.getStockData("training_data")
+data = getStockData("training_data")
 l = len(data) - 1
 batch_size = 32
 half_window = window_size // 2
@@ -86,10 +86,10 @@ import keras
 from keras.models import load_model
 
 #from agent import Agent
-#from functions import *
+from functions import *
 import sys
 #### ---->  Do This: pass the last model name you got from your training in load_model
-model = load_model("/content/drive/My Drive/Colab Notebooks/QANNBModelss/" + "model_ep1.h5")
+model = load_model("/content/drive/My Drive/Colab Notebooks/QANNBModelss/" + "model_ep15.h5")
 window_size = model.layers[0].input.shape.as_list()[1]
 
 agent = Agent(window_size, True)#, model_name)
