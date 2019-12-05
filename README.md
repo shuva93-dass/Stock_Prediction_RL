@@ -46,6 +46,6 @@ This folder consists of 3 main models with modifications:
    2. helper.py : same functionality as mentioned before in AC model
    3. evaluate_budget.py : This script has the training, testing and Budget code
    
-3. Q_RNN: This stands for Dep Q-Learning RNN model. It consists of 4 scripts.
+3. Q_RNN: This stands for Deep Q-Learning RNN model. It consists of 4 scripts.
    1. agent, helper scripts perform the same functionality as mentioned in the Q_ANN_Budget model.
    2. train and test perform the same functionality as mentioned above in AC_ANN model.
