@@ -11,7 +11,7 @@ os.mkdir(path)
 window_size = 100
 episode_count = 3
 agent = Agent(window_size)
-data = df.iloc[:,4].tolist()
+data = getStockData(training_data)
 l = len(data) - 1
 batch_size = 32
 
