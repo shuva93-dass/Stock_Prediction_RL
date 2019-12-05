@@ -1,4 +1,6 @@
 import math
+import numpy as np
+
 def formatPrice(n):
     return("-$" if n<0 else "$")+"{0:.2f}".format(abs(n))
 
