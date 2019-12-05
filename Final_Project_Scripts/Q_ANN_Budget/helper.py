@@ -13,3 +13,12 @@ def getState(data, t, n):
         res.append(sigmoid(block[i + 1] - block[i]))
 
     return np.array([res])
+
+def getStockData(key):
+    datavec = []
+    lines = open(key + ".csv", "r").read().splitlines()
+    
+    for line in lines[1:]:
+        datavec.append(float(line.split(",")[4]))
+    
+    return datavec
