@@ -13,7 +13,11 @@ data = getStockData("training_data")
 l = len(data)-1
 episode_count = 1
 initial_money = 10000
-
+train_start = datetime.datetime.now(pytz.timezone('America/Chicago'))
+print ('\033[95m'+'Start time for training:',train_start.strftime("%I:%M:%S %p") + '\033[0m')
+f = open("trainAC_profit.txt", "a+")
+f.write('********************\n Model : Actor-Critc with ANN with budget\n Total Episode Count : '+ str(episode_count) +'\n Window Size : '+ str(window_size) + '\n Budget : '+ str(initial_money)+'\n ******************** \n')
+f.close()
 for e in range(episode_count):
     print("Episode " + str(e) + "/" + str(episode_count))
     state = getState(data, 0, window_size + 1)
@@ -50,9 +54,15 @@ for e in range(episode_count):
         state = next_state
 
         if done:
+            epi_end = datetime.datetime.now(pytz.timezone('America/Chicago'))
+            f = open("trainAC_profit.txt", "a+")
+            f.write('for episode '+ str(e) +'end train time:'+epi_end.strftime("%I:%M:%S %p")+ 'Total Profit : ' + formatPrice(total_profit)+'\n')
+            f.close()
             print("------------------------------------------")
-            print("Train Total Profit: " + formatPrice(total_profit))
+            print("Train Total Profit for episode "+ str(e) +'is: ' + formatPrice(total_profit))
+            print ('\033[95m' + 'end train time for episode {} : {}:'.format(e,epi_end.strftime("%I:%M:%S %p"))+ '\033[0m')
             print("------------------------------------------")
+                    
             
 # =============================================================================
 # Testing the data
@@ -86,6 +96,9 @@ for t in range(l_test):
     state = next_state
 
     if done:
+        f = open("trainAC_profit.txt", "a+")
+        f.write('------------------------------------------\nTest Total Profit: ' + formatPrice(total_profit)+'\n------------------------------------------\n')
+        f.close()
         print("------------------------------------------")
         print("Test Total Profit: " + formatPrice(total_profit))
         print("------------------------------------------")
