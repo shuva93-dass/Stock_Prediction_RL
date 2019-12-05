@@ -11,7 +11,7 @@ model = load_model("models/" + model_name)
 window_size = model.layers[0].input.shape.as_list()[1]
 
 agent = Agent(window_size, True, model_name)
-data_test = df_test.iloc[:,4].tolist()
+data_test = getStockData(testing_data)
 l = len(data_test) - 1
 batch_size = 32
 
