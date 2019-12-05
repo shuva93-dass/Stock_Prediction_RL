@@ -42,7 +42,7 @@ This folder consists of 3 main models with modifications:
    2. evaluate_budget.py : It includes the training and testing portion embedded with budget factor.
    
 2. Q_ANN_Budget: This stands for Deep Q learning ANN with Budget model. It has 3 scripts
-   a. Agent : This script has the deep neural network wihch generates the q values for all the action and then this script generates the policy  
-   b. Helper : same functionality as mentioned before in AC model
-   c. evaluate : This script has the training, testing and Budget code  
+   1. Agent : This script has the deep neural network wihch generates the q values for all the action and then this script generates the policy  
+   2. Helper : same functionality as mentioned before in AC model
+   3. evaluate : This script has the training, testing and Budget code  
 3. Q_RNN:
